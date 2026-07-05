@@ -4,7 +4,7 @@ import Header from './components/Header'
 import FilterSidebar from './components/FilterSidebar'
 import CharityList from './components/CharityList'
 import CharityDetail from './components/CharityDetail'
-import ExportModal from './components/ExportModal'
+import ExportPreview from './components/ExportPreview'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import McpInfo from './pages/McpInfo'
@@ -201,8 +201,8 @@ function App() {
         />
       </div>
       {showExport && (
-        <ExportModal
-          resultCount={charities.length}
+        <ExportPreview
+          charities={charities}
           onExport={handleExport}
           onClose={() => setShowExport(false)}
         />
